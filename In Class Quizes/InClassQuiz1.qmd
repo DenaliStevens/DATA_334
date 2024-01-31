@@ -1,0 +1,38 @@
+---
+title: "In Class Quiz 1"
+author: "Denali Stevens"
+format: 
+  html:
+    embed-resources: true
+    theme: lux
+---
+
+#### Statement of Integrity: “All work presented is my own, and I have followed all rules for collaboration. I have not used any AI for this assignment.”
+Denali Stevens
+
+Question 1 (4 points). Using the diamonds data set, create the following plot. For the first plot, you should change the default colour and fill of your histogram to values other than the default, but they do not need to match the colorus given below exactly.
+```{r}
+#| warning: false
+#| echo: false
+#| output: false
+library(tidyverse)
+diamonds
+```
+
+```{r}
+ggplot(data = diamonds, aes(x = price)) +
+  geom_histogram(colour = "darkblue", fill = "lightblue", bins = 22) +
+  facet_wrap(~cut)
+```
+
+Question 2 (4 points). Change 2 theme options of your plot in the previous question. At least one of these changes should involve the use of either element_rect() or element_line() in some way. The following gives the reference page we used in class:
+```{r}
+ggplot(data = diamonds, aes(x = price)) +
+  geom_histogram(colour = "darkblue", fill = "lightblue", bins = 22) +
+  facet_wrap(~cut) +
+  theme(strip.background = element_rect(colour = "white", fill = "black"),
+        strip.text.x = element_text(colour = "white"),
+        axis.line = element_line(linewidth = 3, colour = "grey"))
+```
+
+
