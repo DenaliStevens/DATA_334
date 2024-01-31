@@ -35,4 +35,7 @@ ggplot(data = diamonds, aes(x = price)) +
         axis.line = element_line(linewidth = 3, colour = "grey"))
 ```
 
+Question 3. 
+
+https://github.com/DenaliStevens/DATA_334/blob/main/In%20Class%20Quizes/InClassQuiz1.qmd
 
